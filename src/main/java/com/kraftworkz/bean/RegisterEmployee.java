@@ -9,6 +9,11 @@ import javax.faces.context.FacesContext;
 import com.kraftworkz.domain.Employee;
 import com.kraftworkz.service.EmployeeService;
 
+/*
+ * 
+ * @author Engin
+ * */
+
 @ManagedBean
 @SessionScoped
 public class RegisterEmployee {
@@ -38,8 +43,11 @@ public class RegisterEmployee {
 		// Calling Business Service
 		employeeService.register(employee);
 		// Add message
-		FacesContext.getCurrentInstance().addMessage(null, 
-				new FacesMessage("The Employee "+this.employee.getEmployeeName()+" Is Registered Successfully"));
+		FacesContext.getCurrentInstance().addMessage(
+				null,
+				new FacesMessage("The Employee "
+						+ this.employee.getEmployeeName()
+						+ " Is Registered Successfully"));
 		return "";
 	}
 }

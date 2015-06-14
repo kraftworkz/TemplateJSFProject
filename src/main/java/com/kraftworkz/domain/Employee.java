@@ -2,6 +2,11 @@ package com.kraftworkz.domain;
 
 import java.util.Date;
 
+/*
+ * 
+ * @author Engin
+ * */
+
 public class Employee {
 	private long employeeId;
 	private String employeeName;
